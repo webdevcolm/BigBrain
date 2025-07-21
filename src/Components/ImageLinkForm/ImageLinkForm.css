@@ -1,0 +1,49 @@
+.Form {
+  width: 90%; /* Responsive width */
+  max-width: 700px; /* Limit maximum width */
+  display: flex;
+  flex-direction: row; /* Keep items side-by-side */
+  align-items: center; /* Vertically align input and button */
+  justify-content: center; /* Center the form */
+  --s: 3px; /* Control the size */
+  --c1: #97d9e1;
+  --c2: #d9afd9;
+
+  --c: #0000 75%, var(--c1) 0;
+  --g1: conic-gradient(at 75% 25%, var(--c));
+  --g2: conic-gradient(at 25% 75%, var(--c));
+  background: 
+    var(--g1), var(--g1) var(--s) var(--s),
+    var(--g2), var(--g2) var(--s) var(--s) var(--c2);
+  background-size: calc(2 * var(--s)) calc(2 * var(--s));
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+input {
+  flex: 1; /* Input takes up remaining space */
+  margin-right: 10px; /* Space between input and button */
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+button {
+  flex: 0 0 auto; /* Button size is determined by content */
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease; /* Smooth resizing */
+}
+
+@media screen and (max-width: 600px) {
+  input {
+    font-size: 0.9rem; /* Reduce font size slightly */
+  }
+
+  button {
+    padding: 8px; /* Smaller padding */
+    font-size: 0.8rem; /* Adjust font size */
+  }
+}
