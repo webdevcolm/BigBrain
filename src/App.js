@@ -46,6 +46,7 @@ export class App extends Component {
   }
 
   calculateFaceLocation=(data)=>{
+    console.log(data)
         const image = document.getElementById("inputimage");
         const width = Number(image.width);
         const height = Number(image.height);
