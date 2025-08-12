@@ -92,7 +92,7 @@ export class App extends Component {
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
   
-    fetch('http://localhost:3000/api/clarifai', {
+    fetch('https://node-js-d7td.onrender.com/api/clarifai', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -124,7 +124,7 @@ export class App extends Component {
       })
       .then((works) => {
         if (works) {
-          return fetch('http://localhost:3000/image', {
+          return fetch('https://node-js-d7td.onrender.com/image', {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
